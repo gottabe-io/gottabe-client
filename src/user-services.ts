@@ -8,6 +8,11 @@ export class UserServices {
         this.client = client;
     }
 
+    async checkAvailability(email: string, nickname: string, options?: any): Promise<void> {
+        let params: any = {'email': email, 'nickname': nickname};
+        await this.client.get(`/api/user/check-availability`, Object.assign({params}, options || {}));
+    }
+
     async createNew(body?:UserVO): Promise<void> {
         await this.client.postForEntity(`/api/user`, body);
     }
@@ -56,8 +61,9 @@ export class UserServices {
         return await this.client.get(`/api/user/current/tokens`);
     }
 
-    async createToken(): Promise<void> {
-        await this.client.post(`/api/user/current/tokens`);
+    async createToken(): Promise<string | null> {
+        let response = <Response> await this.client.post(`/api/user/current/tokens`);
+        return response.headers.get('token');
     }
 
     async removeToken(tokenId:string): Promise<void> {
@@ -65,8 +71,8 @@ export class UserServices {
         await this.client.delete(`/api/user/current/tokens`, {params, type:'json'});
     }
 
-    async recover(recoverCode:string, password:string, passwordConfirmation:string): Promise<void> {
-        let params: any = {'recoverCode': recoverCode, 'password': password, 'passwordConfirmation': passwordConfirmation};
+    async recover(recoverCode:string, email: string, password:string, passwordConfirmation:string): Promise<void> {
+        let params: any = {recoverCode, email, password, passwordConfirmation};
         await this.client.post(`/api/user/recover`, {params, type:'json'});
     }
 

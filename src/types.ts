@@ -41,6 +41,7 @@ export interface PackageReleaseVO {
     releaseDate?: string;
     sourceUrl?: string;
     version?: string;
+    license?: string;
 }
 
 export interface PackageConfig {
@@ -107,6 +108,15 @@ export interface PackageGroupVO {
     owner?: OwnerVO;
 }
 
+export interface PublicKeyVO {
+
+    active?: boolean;
+    algorithm?: string;
+    hash?: string;
+    keyId?: string;
+    publicKey?: string;
+}
+
 export interface TargetConfig {
     arch?: string;
     defines?: any;
@@ -150,4 +160,29 @@ export interface ReviewVO {
     user?: AnyUserVO;
     myRate?:number;
     vulnerability:boolean;
+}
+
+export interface PackageSummaryVO {
+    groupName : string;
+    name : string;
+    ownerNickname : string;
+    releaseDate : string;
+    version : string;
+}
+
+export interface StatisticsVO {
+    totalArtifacts?: number;
+    downloadsLast30Days?: number;
+    newUsers?: number;
+}
+
+export interface PackageStatisticVO {
+    packageName: string;
+    count: number;
+}
+
+export interface OwnersStatisticsVO {
+    downloadsLast7Days: number;
+    topPackageDownload7Days: PackageStatisticVO;
+    packageReviewsToday : PackageStatisticVO;
 }

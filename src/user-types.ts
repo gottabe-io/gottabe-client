@@ -1,5 +1,5 @@
 export interface UserVO {
-
+    id?: number;
     activationCode?: string;
     confirmPassword?: string;
     description?: string;
@@ -11,6 +11,8 @@ export interface UserVO {
     password?: string;
     recoveryCode?: string;
     twitterAccount?: string;
+    termsAccepted?: boolean;
+    userAcceptanceData?: string;
 }
 
 export interface UserPrivacyVO {

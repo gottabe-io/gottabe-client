@@ -61,4 +61,9 @@ export class ApiPackagesService {
         return await this.client.get(`/api/packages/mine`, Object.assign({params}, options || {}));
     }
 
+    async packagesFrom(owner: string, type?:string, page?:number, size?:number, options?:any): Promise<PackageDataVO[]> {
+        let params: any = { 'owner': owner, 'type': type, 'page': page, 'size': size};
+        return await this.client.get(`/api/packages/from`, Object.assign({params}, options || {}));
+    }
+
 }

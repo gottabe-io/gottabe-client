@@ -1,0 +1,4089 @@
+{
+  "openapi": "3.0.3",
+  "info": {
+    "title": "Api Documentation",
+    "description": "Api Documentation",
+    "termsOfService": "urn:tos",
+    "contact": {},
+    "license": {
+      "name": "Apache 2.0",
+      "url": "http://www.apache.org/licenses/LICENSE-2.0"
+    },
+    "version": "1.0"
+  },
+  "servers": [
+    {
+      "url": "http://localhost:8080",
+      "description": "Inferred Url"
+    }
+  ],
+  "tags": [
+    {
+      "name": "basic-error-controller",
+      "description": "Basic Error Controller"
+    },
+    {
+      "name": "organization-controller",
+      "description": "Organization Controller"
+    },
+    {
+      "name": "owner-public-key-controller",
+      "description": "Owner Public Key Controller"
+    },
+    {
+      "name": "package-controller",
+      "description": "Package Controller"
+    },
+    {
+      "name": "review-controller",
+      "description": "Review Controller"
+    },
+    {
+      "name": "search-controller",
+      "description": "Search Controller"
+    },
+    {
+      "name": "statistics-controller",
+      "description": "Statistics Controller"
+    },
+    {
+      "name": "token-controller",
+      "description": "Token Controller"
+    },
+    {
+      "name": "user-controller",
+      "description": "User Controller"
+    },
+    {
+      "name": "user-request-controller",
+      "description": "User Request Controller"
+    }
+  ],
+  "paths": {
+    "/error": {
+      "get": {
+        "tags": [
+          "basic-error-controller"
+        ],
+        "summary": "error",
+        "operationId": "errorUsingGET",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "type": "object",
+                  "additionalProperties": {
+                    "type": "object"
+                  }
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          },
+          "404": {
+            "description": "Not Found"
+          }
+        }
+      },
+      "put": {
+        "tags": [
+          "basic-error-controller"
+        ],
+        "summary": "error",
+        "operationId": "errorUsingPUT",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "type": "object",
+                  "additionalProperties": {
+                    "type": "object"
+                  }
+                }
+              }
+            }
+          },
+          "201": {
+            "description": "Created"
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          },
+          "404": {
+            "description": "Not Found"
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "basic-error-controller"
+        ],
+        "summary": "error",
+        "operationId": "errorUsingPOST",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "type": "object",
+                  "additionalProperties": {
+                    "type": "object"
+                  }
+                }
+              }
+            }
+          },
+          "201": {
+            "description": "Created"
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          },
+          "404": {
+            "description": "Not Found"
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "basic-error-controller"
+        ],
+        "summary": "error",
+        "operationId": "errorUsingDELETE",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "type": "object",
+                  "additionalProperties": {
+                    "type": "object"
+                  }
+                }
+              }
+            }
+          },
+          "204": {
+            "description": "No Content"
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          }
+        }
+      },
+      "options": {
+        "tags": [
+          "basic-error-controller"
+        ],
+        "summary": "error",
+        "operationId": "errorUsingOPTIONS",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "type": "object",
+                  "additionalProperties": {
+                    "type": "object"
+                  }
+                }
+              }
+            }
+          },
+          "204": {
+            "description": "No Content"
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          }
+        }
+      },
+      "head": {
+        "tags": [
+          "basic-error-controller"
+        ],
+        "summary": "error",
+        "operationId": "errorUsingHEAD",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "type": "object",
+                  "additionalProperties": {
+                    "type": "object"
+                  }
+                }
+              }
+            }
+          },
+          "204": {
+            "description": "No Content"
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          }
+        }
+      },
+      "patch": {
+        "tags": [
+          "basic-error-controller"
+        ],
+        "summary": "error",
+        "operationId": "errorUsingPATCH",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "type": "object",
+                  "additionalProperties": {
+                    "type": "object"
+                  }
+                }
+              }
+            }
+          },
+          "204": {
+            "description": "No Content"
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          }
+        }
+      },
+      "trace": {
+        "tags": [
+          "basic-error-controller"
+        ],
+        "summary": "error",
+        "operationId": "errorUsingTRACE",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "type": "object",
+                  "additionalProperties": {
+                    "type": "object"
+                  }
+                }
+              }
+            }
+          },
+          "204": {
+            "description": "No Content"
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          }
+        }
+      }
+    },
+    "/api/organization": {
+      "post": {
+        "tags": [
+          "organization-controller"
+        ],
+        "summary": "createNew",
+        "operationId": "createNewUsingPOST",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/OwnerVO"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "201": {
+            "description": "Created"
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          },
+          "404": {
+            "description": "Not Found"
+          }
+        }
+      }
+    },
+    "/api/organization/mine": {
+      "get": {
+        "tags": [
+          "organization-controller"
+        ],
+        "summary": "getMyOrganizations",
+        "operationId": "getMyOrganizationsUsingGET",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/OrgUserVO"
+                  }
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          },
+          "404": {
+            "description": "Not Found"
+          }
+        }
+      }
+    },
+    "/api/organization/{nickname}": {
+      "get": {
+        "tags": [
+          "organization-controller"
+        ],
+        "summary": "retrieve",
+        "operationId": "retrieveUsingGET",
+        "parameters": [
+          {
+            "name": "nickname",
+            "in": "path",
+            "description": "nickname",
+            "required": true,
+            "style": "simple",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/OwnerVO"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          },
+          "404": {
+            "description": "Not Found"
+          }
+        }
+      }
+    },
+    "/api/organization/{nickname}/users": {
+      "get": {
+        "tags": [
+          "organization-controller"
+        ],
+        "summary": "retrieveUsers",
+        "operationId": "retrieveUsersUsingGET",
+        "parameters": [
+          {
+            "name": "nickname",
+            "in": "path",
+            "description": "nickname",
+            "required": true,
+            "style": "simple",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/AnyUserVO"
+                  }
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          },
+          "404": {
+            "description": "Not Found"
+          }
+        }
+      },
+      "put": {
+        "tags": [
+          "organization-controller"
+        ],
+        "summary": "addUser",
+        "operationId": "addUserUsingPUT",
+        "parameters": [
+          {
+            "name": "nickname",
+            "in": "path",
+            "description": "nickname",
+            "required": true,
+            "style": "simple",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/AnyUserVO"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "201": {
+            "description": "Created"
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          },
+          "404": {
+            "description": "Not Found"
+          }
+        }
+      }
+    },
+    "/api/public-key": {
+      "get": {
+        "tags": [
+          "owner-public-key-controller"
+        ],
+        "summary": "findOwnerKeys",
+        "operationId": "findOwnerKeysUsingGET",
+        "parameters": [
+          {
+            "name": "owner-id",
+            "in": "query",
+            "description": "owner-id",
+            "required": true,
+            "style": "form",
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          },
+          {
+            "name": "page",
+            "in": "query",
+            "description": "page",
+            "required": false,
+            "style": "form",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "size",
+            "in": "query",
+            "description": "size",
+            "required": false,
+            "style": "form",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/PublicKeyVO"
+                  }
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          },
+          "404": {
+            "description": "Not Found"
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "owner-public-key-controller"
+        ],
+        "summary": "uploadPublicKey",
+        "operationId": "uploadPublicKeyUsingPOST",
+        "parameters": [
+          {
+            "name": "organization-id",
+            "in": "header",
+            "description": "organization-id",
+            "required": false,
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/PublicKeyVO"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "201": {
+            "description": "Created"
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          },
+          "404": {
+            "description": "Not Found"
+          }
+        }
+      }
+    },
+    "/api/packages": {
+      "post": {
+        "tags": [
+          "package-controller"
+        ],
+        "summary": "createGroup",
+        "operationId": "createGroupUsingPOST",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/PackageGroupVO"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "201": {
+            "description": "Created"
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          },
+          "404": {
+            "description": "Not Found"
+          }
+        }
+      }
+    },
+    "/api/packages/all": {
+      "get": {
+        "tags": [
+          "package-controller"
+        ],
+        "summary": "groups",
+        "operationId": "groupsUsingGET",
+        "parameters": [
+          {
+            "name": "groupName",
+            "in": "query",
+            "description": "groupName",
+            "required": true,
+            "style": "form",
+            "schema": {
+              "pattern": "^[a-zA-Z0-9._-]+$",
+              "type": "string"
+            }
+          },
+          {
+            "name": "page",
+            "in": "query",
+            "description": "page",
+            "required": false,
+            "style": "form",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "size",
+            "in": "query",
+            "description": "size",
+            "required": false,
+            "style": "form",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/PackageGroupVO"
+                  }
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          },
+          "404": {
+            "description": "Not Found"
+          }
+        }
+      }
+    },
+    "/api/packages/from": {
+      "get": {
+        "tags": [
+          "package-controller"
+        ],
+        "summary": "packagesFrom",
+        "operationId": "packagesFromUsingGET",
+        "parameters": [
+          {
+            "name": "type",
+            "in": "query",
+            "description": "type",
+            "required": false,
+            "style": "form",
+            "explode": true,
+            "schema": {
+              "type": "string",
+              "enum": [
+                "PACKAGE",
+                "PLUGIN"
+              ]
+            }
+          },
+          {
+            "name": "owner",
+            "in": "query",
+            "description": "owner",
+            "required": true,
+            "style": "form",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "page",
+            "in": "query",
+            "description": "page",
+            "required": false,
+            "style": "form",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "size",
+            "in": "query",
+            "description": "size",
+            "required": false,
+            "style": "form",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/PackageDataVO"
+                  }
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          },
+          "404": {
+            "description": "Not Found"
+          }
+        }
+      }
+    },
+    "/api/packages/mine": {
+      "get": {
+        "tags": [
+          "package-controller"
+        ],
+        "summary": "myPackages",
+        "operationId": "myPackagesUsingGET",
+        "parameters": [
+          {
+            "name": "type",
+            "in": "query",
+            "description": "type",
+            "required": false,
+            "style": "form",
+            "explode": true,
+            "schema": {
+              "type": "string",
+              "enum": [
+                "PACKAGE",
+                "PLUGIN"
+              ]
+            }
+          },
+          {
+            "name": "page",
+            "in": "query",
+            "description": "page",
+            "required": false,
+            "style": "form",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "size",
+            "in": "query",
+            "description": "size",
+            "required": false,
+            "style": "form",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/PackageDataVO"
+                  }
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          },
+          "404": {
+            "description": "Not Found"
+          }
+        }
+      }
+    },
+    "/api/packages/{groupName}": {
+      "get": {
+        "tags": [
+          "package-controller"
+        ],
+        "summary": "groupInfo",
+        "operationId": "groupInfoUsingGET",
+        "parameters": [
+          {
+            "name": "groupName",
+            "in": "path",
+            "description": "groupName",
+            "required": true,
+            "style": "simple",
+            "schema": {
+              "pattern": "^[a-zA-Z0-9._-]+$",
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/PackageGroupVO"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          },
+          "404": {
+            "description": "Not Found"
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "package-controller"
+        ],
+        "summary": "createPackage",
+        "operationId": "createPackageUsingPOST",
+        "parameters": [
+          {
+            "name": "groupName",
+            "in": "path",
+            "description": "groupName",
+            "required": true,
+            "style": "simple",
+            "schema": {
+              "pattern": "^[a-zA-Z0-9._-]+$",
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/PackageDataVO"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "201": {
+            "description": "Created"
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          },
+          "404": {
+            "description": "Not Found"
+          }
+        }
+      }
+    },
+    "/api/packages/{groupName}/all": {
+      "get": {
+        "tags": [
+          "package-controller"
+        ],
+        "summary": "groupPackages",
+        "operationId": "groupPackagesUsingGET",
+        "parameters": [
+          {
+            "name": "groupName",
+            "in": "path",
+            "description": "groupName",
+            "required": true,
+            "style": "simple",
+            "schema": {
+              "pattern": "^[a-zA-Z0-9._-]+$",
+              "type": "string"
+            }
+          },
+          {
+            "name": "type",
+            "in": "query",
+            "description": "type",
+            "required": false,
+            "style": "form",
+            "schema": {
+              "type": "string",
+              "enum": [
+                "PACKAGE",
+                "PLUGIN"
+              ]
+            }
+          },
+          {
+            "name": "fetch",
+            "in": "query",
+            "description": "fetch",
+            "required": false,
+            "style": "form",
+            "schema": {
+              "type": "string",
+              "enum": [
+                "ALL_RELEASES",
+                "LATEST_RELEASE",
+                "NONE"
+              ]
+            }
+          },
+          {
+            "name": "page",
+            "in": "query",
+            "description": "page",
+            "required": false,
+            "style": "form",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "size",
+            "in": "query",
+            "description": "size",
+            "required": false,
+            "style": "form",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/PackageDataVO"
+                  }
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          },
+          "404": {
+            "description": "Not Found"
+          }
+        }
+      }
+    },
+    "/api/packages/{groupName}/{packageName}": {
+      "get": {
+        "tags": [
+          "package-controller"
+        ],
+        "summary": "packageInfo",
+        "operationId": "packageInfoUsingGET",
+        "parameters": [
+          {
+            "name": "groupName",
+            "in": "path",
+            "description": "groupName",
+            "required": true,
+            "style": "simple",
+            "schema": {
+              "pattern": "^[a-zA-Z0-9._-]+$",
+              "type": "string"
+            }
+          },
+          {
+            "name": "packageName",
+            "in": "path",
+            "description": "packageName",
+            "required": true,
+            "style": "simple",
+            "schema": {
+              "pattern": "^\\w+$",
+              "type": "string"
+            }
+          },
+          {
+            "name": "type",
+            "in": "query",
+            "description": "type",
+            "required": false,
+            "style": "form",
+            "explode": true,
+            "schema": {
+              "type": "string",
+              "enum": [
+                "PACKAGE",
+                "PLUGIN"
+              ]
+            }
+          },
+          {
+            "name": "fetch",
+            "in": "query",
+            "description": "fetch",
+            "required": false,
+            "style": "form",
+            "schema": {
+              "type": "string",
+              "enum": [
+                "ALL_RELEASES",
+                "LATEST_RELEASE",
+                "NONE"
+              ]
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/PackageDataVO"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          },
+          "404": {
+            "description": "Not Found"
+          }
+        }
+      }
+    },
+    "/api/packages/{groupName}/{packageName}/{version}": {
+      "get": {
+        "tags": [
+          "package-controller"
+        ],
+        "summary": "packageReleases",
+        "operationId": "packageReleasesUsingGET",
+        "parameters": [
+          {
+            "name": "groupName",
+            "in": "path",
+            "description": "groupName",
+            "required": true,
+            "style": "simple",
+            "schema": {
+              "pattern": "^[a-zA-Z0-9._-]+$",
+              "type": "string"
+            }
+          },
+          {
+            "name": "packageName",
+            "in": "path",
+            "description": "packageName",
+            "required": true,
+            "style": "simple",
+            "schema": {
+              "pattern": "^\\w+$",
+              "type": "string"
+            }
+          },
+          {
+            "name": "version",
+            "in": "path",
+            "description": "version",
+            "required": true,
+            "style": "simple",
+            "schema": {
+              "pattern": "^[a-zA-Z0-9._-]+$",
+              "type": "string"
+            }
+          },
+          {
+            "name": "type",
+            "in": "query",
+            "description": "type",
+            "required": false,
+            "style": "form",
+            "explode": true,
+            "schema": {
+              "type": "string",
+              "enum": [
+                "PACKAGE",
+                "PLUGIN"
+              ]
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/PackageReleaseVO"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          },
+          "404": {
+            "description": "Not Found"
+          }
+        }
+      }
+    },
+    "/api/packages/{groupName}/{packageName}/{version}/build.json": {
+      "post": {
+        "tags": [
+          "package-controller"
+        ],
+        "summary": "createPackage",
+        "operationId": "createPackageUsingPOST_1",
+        "parameters": [
+          {
+            "name": "groupName",
+            "in": "path",
+            "description": "groupName",
+            "required": true,
+            "style": "simple",
+            "schema": {
+              "pattern": "^[a-zA-Z0-9._-]+$",
+              "type": "string"
+            }
+          },
+          {
+            "name": "packageName",
+            "in": "path",
+            "description": "packageName",
+            "required": true,
+            "style": "simple",
+            "schema": {
+              "pattern": "^\\w+$",
+              "type": "string"
+            }
+          },
+          {
+            "name": "version",
+            "in": "path",
+            "description": "version",
+            "required": true,
+            "style": "simple",
+            "schema": {
+              "pattern": "^[a-zA-Z0-9._-]+$",
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/BuildDescriptor"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "201": {
+            "description": "Created"
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          },
+          "404": {
+            "description": "Not Found"
+          }
+        }
+      }
+    },
+    "/api/packages/{groupName}/{packageName}/{version}/plugin.json": {
+      "post": {
+        "tags": [
+          "package-controller"
+        ],
+        "summary": "createPlugin",
+        "operationId": "createPluginUsingPOST",
+        "parameters": [
+          {
+            "name": "groupName",
+            "in": "path",
+            "description": "groupName",
+            "required": true,
+            "style": "simple",
+            "schema": {
+              "pattern": "^[a-zA-Z0-9._-]+$",
+              "type": "string"
+            }
+          },
+          {
+            "name": "packageName",
+            "in": "path",
+            "description": "packageName",
+            "required": true,
+            "style": "simple",
+            "schema": {
+              "pattern": "^\\w+$",
+              "type": "string"
+            }
+          },
+          {
+            "name": "version",
+            "in": "path",
+            "description": "version",
+            "required": true,
+            "style": "simple",
+            "schema": {
+              "pattern": "^[a-zA-Z0-9._-]+$",
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/PluginDescriptor"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "201": {
+            "description": "Created"
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          },
+          "404": {
+            "description": "Not Found"
+          }
+        }
+      }
+    },
+    "/api/packages/{groupName}/{packageName}/{version}/{filename}": {
+      "get": {
+        "tags": [
+          "package-controller"
+        ],
+        "summary": "getPackageFile",
+        "operationId": "getPackageFileUsingGET",
+        "parameters": [
+          {
+            "name": "groupName",
+            "in": "path",
+            "description": "groupName",
+            "required": true,
+            "style": "simple",
+            "schema": {
+              "pattern": "^[a-zA-Z0-9._-]+$",
+              "type": "string"
+            }
+          },
+          {
+            "name": "packageName",
+            "in": "path",
+            "description": "packageName",
+            "required": true,
+            "style": "simple",
+            "schema": {
+              "pattern": "^\\w+$",
+              "type": "string"
+            }
+          },
+          {
+            "name": "version",
+            "in": "path",
+            "description": "version",
+            "required": true,
+            "style": "simple",
+            "schema": {
+              "pattern": "^[a-zA-Z0-9._-]+$",
+              "type": "string"
+            }
+          },
+          {
+            "name": "filename",
+            "in": "path",
+            "description": "filename",
+            "required": true,
+            "style": "simple",
+            "schema": {
+              "pattern": "^[a-zA-Z0-9._ -]+$",
+              "type": "string"
+            }
+          },
+          {
+            "name": "type",
+            "in": "query",
+            "description": "type",
+            "required": false,
+            "style": "form",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/Resource"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          },
+          "404": {
+            "description": "Not Found"
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "package-controller"
+        ],
+        "summary": "postPackageFile",
+        "operationId": "postPackageFileUsingPOST",
+        "parameters": [
+          {
+            "name": "groupName",
+            "in": "path",
+            "description": "groupName",
+            "required": true,
+            "style": "simple",
+            "schema": {
+              "pattern": "^[a-zA-Z0-9._-]+$",
+              "type": "string"
+            }
+          },
+          {
+            "name": "packageName",
+            "in": "path",
+            "description": "packageName",
+            "required": true,
+            "style": "simple",
+            "schema": {
+              "pattern": "^\\w+$",
+              "type": "string"
+            }
+          },
+          {
+            "name": "version",
+            "in": "path",
+            "description": "version",
+            "required": true,
+            "style": "simple",
+            "schema": {
+              "pattern": "^[a-zA-Z0-9._-]+$",
+              "type": "string"
+            }
+          },
+          {
+            "name": "filename",
+            "in": "path",
+            "description": "filename",
+            "required": true,
+            "style": "simple",
+            "schema": {
+              "pattern": "^[a-zA-Z0-9._ -]+$",
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "string",
+                "format": "binary"
+              }
+            },
+            "application/octet-stream": {
+              "schema": {
+                "type": "string",
+                "format": "binary"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "201": {
+            "description": "Created"
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          },
+          "404": {
+            "description": "Not Found"
+          }
+        }
+      }
+    },
+    "/api/reviews/{groupName}/{packageName}/{version}": {
+      "get": {
+        "tags": [
+          "review-controller"
+        ],
+        "summary": "findReviews",
+        "operationId": "findReviewsUsingGET",
+        "parameters": [
+          {
+            "name": "groupName",
+            "in": "path",
+            "description": "groupName",
+            "required": true,
+            "style": "simple",
+            "schema": {
+              "pattern": "^[a-zA-Z0-9._-]+$",
+              "type": "string"
+            }
+          },
+          {
+            "name": "packageName",
+            "in": "path",
+            "description": "packageName",
+            "required": true,
+            "style": "simple",
+            "schema": {
+              "pattern": "^\\w+$",
+              "type": "string"
+            }
+          },
+          {
+            "name": "version",
+            "in": "path",
+            "description": "version",
+            "required": true,
+            "style": "simple",
+            "schema": {
+              "pattern": "^[a-zA-Z0-9._-]+$",
+              "type": "string"
+            }
+          },
+          {
+            "name": "page",
+            "in": "query",
+            "description": "page",
+            "required": false,
+            "style": "form",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "size",
+            "in": "query",
+            "description": "size",
+            "required": false,
+            "style": "form",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/ReviewVO"
+                  }
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          },
+          "404": {
+            "description": "Not Found"
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "review-controller"
+        ],
+        "summary": "createReview",
+        "operationId": "createReviewUsingPOST",
+        "parameters": [
+          {
+            "name": "groupName",
+            "in": "path",
+            "description": "groupName",
+            "required": true,
+            "style": "simple",
+            "schema": {
+              "pattern": "^[a-zA-Z0-9._-]+$",
+              "type": "string"
+            }
+          },
+          {
+            "name": "packageName",
+            "in": "path",
+            "description": "packageName",
+            "required": true,
+            "style": "simple",
+            "schema": {
+              "pattern": "^\\w+$",
+              "type": "string"
+            }
+          },
+          {
+            "name": "version",
+            "in": "path",
+            "description": "version",
+            "required": true,
+            "style": "simple",
+            "schema": {
+              "pattern": "^[a-zA-Z0-9._-]+$",
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/NewReviewVO"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "201": {
+            "description": "Created"
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          },
+          "404": {
+            "description": "Not Found"
+          }
+        }
+      }
+    },
+    "/api/reviews/{groupName}/{packageName}/{version}/stars": {
+      "get": {
+        "tags": [
+          "review-controller"
+        ],
+        "summary": "getStars",
+        "operationId": "getStarsUsingGET",
+        "parameters": [
+          {
+            "name": "groupName",
+            "in": "path",
+            "description": "groupName",
+            "required": true,
+            "style": "simple",
+            "schema": {
+              "pattern": "^[a-zA-Z0-9._-]+$",
+              "type": "string"
+            }
+          },
+          {
+            "name": "packageName",
+            "in": "path",
+            "description": "packageName",
+            "required": true,
+            "style": "simple",
+            "schema": {
+              "pattern": "^\\w+$",
+              "type": "string"
+            }
+          },
+          {
+            "name": "version",
+            "in": "path",
+            "description": "version",
+            "required": true,
+            "style": "simple",
+            "schema": {
+              "pattern": "^[a-zA-Z0-9._-]+$",
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/StarsVO"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          },
+          "404": {
+            "description": "Not Found"
+          }
+        }
+      }
+    },
+    "/api/reviews/{groupName}/{packageName}/{version}/{id}": {
+      "get": {
+        "tags": [
+          "review-controller"
+        ],
+        "summary": "loadReview",
+        "operationId": "loadReviewUsingGET",
+        "parameters": [
+          {
+            "name": "groupName",
+            "in": "path",
+            "description": "groupName",
+            "required": true,
+            "style": "simple",
+            "schema": {
+              "pattern": "^[a-zA-Z0-9._-]+$",
+              "type": "string"
+            }
+          },
+          {
+            "name": "packageName",
+            "in": "path",
+            "description": "packageName",
+            "required": true,
+            "style": "simple",
+            "schema": {
+              "pattern": "^\\w+$",
+              "type": "string"
+            }
+          },
+          {
+            "name": "version",
+            "in": "path",
+            "description": "version",
+            "required": true,
+            "style": "simple",
+            "schema": {
+              "pattern": "^[a-zA-Z0-9._-]+$",
+              "type": "string"
+            }
+          },
+          {
+            "name": "id",
+            "in": "path",
+            "description": "id",
+            "required": true,
+            "style": "simple",
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/ReviewVO"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          },
+          "404": {
+            "description": "Not Found"
+          }
+        }
+      },
+      "patch": {
+        "tags": [
+          "review-controller"
+        ],
+        "summary": "rateReview",
+        "operationId": "rateReviewUsingPATCH",
+        "parameters": [
+          {
+            "name": "groupName",
+            "in": "path",
+            "description": "groupName",
+            "required": true,
+            "style": "simple",
+            "schema": {
+              "pattern": "^[a-zA-Z0-9._-]+$",
+              "type": "string"
+            }
+          },
+          {
+            "name": "packageName",
+            "in": "path",
+            "description": "packageName",
+            "required": true,
+            "style": "simple",
+            "schema": {
+              "pattern": "^\\w+$",
+              "type": "string"
+            }
+          },
+          {
+            "name": "version",
+            "in": "path",
+            "description": "version",
+            "required": true,
+            "style": "simple",
+            "schema": {
+              "pattern": "^[a-zA-Z0-9._-]+$",
+              "type": "string"
+            }
+          },
+          {
+            "name": "id",
+            "in": "path",
+            "description": "id",
+            "required": true,
+            "style": "simple",
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ReviewLikeVO"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "204": {
+            "description": "No Content"
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          }
+        }
+      }
+    },
+    "/api/reviews/{groupName}/{packageName}/{version}/{id}/my-rate": {
+      "get": {
+        "tags": [
+          "review-controller"
+        ],
+        "summary": "getMyReviewRate",
+        "operationId": "getMyReviewRateUsingGET",
+        "parameters": [
+          {
+            "name": "groupName",
+            "in": "path",
+            "description": "groupName",
+            "required": true,
+            "style": "simple",
+            "schema": {
+              "pattern": "^[a-zA-Z0-9._-]+$",
+              "type": "string"
+            }
+          },
+          {
+            "name": "packageName",
+            "in": "path",
+            "description": "packageName",
+            "required": true,
+            "style": "simple",
+            "schema": {
+              "pattern": "^\\w+$",
+              "type": "string"
+            }
+          },
+          {
+            "name": "version",
+            "in": "path",
+            "description": "version",
+            "required": true,
+            "style": "simple",
+            "schema": {
+              "pattern": "^[a-zA-Z0-9._-]+$",
+              "type": "string"
+            }
+          },
+          {
+            "name": "id",
+            "in": "path",
+            "description": "id",
+            "required": true,
+            "style": "simple",
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/ReviewLikeVO"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          },
+          "404": {
+            "description": "Not Found"
+          }
+        }
+      }
+    },
+    "/api/search": {
+      "get": {
+        "tags": [
+          "search-controller"
+        ],
+        "summary": "getStars",
+        "operationId": "getStarsUsingGET_1",
+        "parameters": [
+          {
+            "name": "query",
+            "in": "query",
+            "description": "query",
+            "required": true,
+            "style": "form",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "page",
+            "in": "query",
+            "description": "page",
+            "required": false,
+            "style": "form",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "size",
+            "in": "query",
+            "description": "size",
+            "required": false,
+            "style": "form",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/PackageDataVO"
+                  }
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          },
+          "404": {
+            "description": "Not Found"
+          }
+        }
+      }
+    },
+    "/api/statistics/general-statistics": {
+      "get": {
+        "tags": [
+          "statistics-controller"
+        ],
+        "summary": "generalStatistics",
+        "operationId": "generalStatisticsUsingGET",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/StatisticsVO"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          },
+          "404": {
+            "description": "Not Found"
+          }
+        }
+      }
+    },
+    "/api/statistics/latest-releases": {
+      "get": {
+        "tags": [
+          "statistics-controller"
+        ],
+        "summary": "latestPackagesReleased",
+        "operationId": "latestPackagesReleasedUsingGET",
+        "parameters": [
+          {
+            "name": "type",
+            "in": "query",
+            "description": "type",
+            "required": false,
+            "style": "form",
+            "schema": {
+              "type": "string",
+              "enum": [
+                "PACKAGE",
+                "PLUGIN"
+              ]
+            }
+          },
+          {
+            "name": "page",
+            "in": "query",
+            "description": "page",
+            "required": false,
+            "style": "form",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "size",
+            "in": "query",
+            "description": "size",
+            "required": false,
+            "style": "form",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/PackageSummaryVO"
+                  }
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          },
+          "404": {
+            "description": "Not Found"
+          }
+        }
+      }
+    },
+    "/api/statistics/my-statistics": {
+      "get": {
+        "tags": [
+          "statistics-controller"
+        ],
+        "summary": "myStatistics",
+        "operationId": "myStatisticsUsingGET",
+        "parameters": [
+          {
+            "name": "current-owner",
+            "in": "query",
+            "description": "current-owner",
+            "required": true,
+            "style": "form",
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/OwnerStatisticsVO"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          },
+          "404": {
+            "description": "Not Found"
+          }
+        }
+      }
+    },
+    "/oauth/revoke/{tokenId}": {
+      "post": {
+        "tags": [
+          "token-controller"
+        ],
+        "summary": "revokeToken",
+        "operationId": "revokeTokenUsingPOST",
+        "parameters": [
+          {
+            "name": "tokenId",
+            "in": "path",
+            "description": "tokenId",
+            "required": true,
+            "style": "simple",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "parameters",
+            "in": "query",
+            "description": "parameters",
+            "required": true,
+            "style": "deepObject",
+            "explode": true,
+            "schema": {
+              "type": "object",
+              "additionalProperties": {
+                "type": "string"
+              }
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "201": {
+            "description": "Created"
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          },
+          "404": {
+            "description": "Not Found"
+          }
+        }
+      }
+    },
+    "/oauth/token": {
+      "get": {
+        "tags": [
+          "token-controller"
+        ],
+        "summary": "getAuthenticate",
+        "operationId": "getAuthenticateUsingGET",
+        "parameters": [
+          {
+            "name": "parameters",
+            "in": "query",
+            "description": "parameters",
+            "required": true,
+            "style": "deepObject",
+            "explode": true,
+            "schema": {
+              "type": "object",
+              "additionalProperties": {
+                "type": "string"
+              }
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/OAuth2Token"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          },
+          "404": {
+            "description": "Not Found"
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "token-controller"
+        ],
+        "summary": "authenticate",
+        "operationId": "authenticateUsingPOST",
+        "parameters": [
+          {
+            "name": "parameters",
+            "in": "query",
+            "description": "parameters",
+            "required": true,
+            "style": "deepObject",
+            "explode": true,
+            "schema": {
+              "type": "object",
+              "additionalProperties": {
+                "type": "string"
+              }
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/OAuth2Token"
+                }
+              }
+            }
+          },
+          "201": {
+            "description": "Created"
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          },
+          "404": {
+            "description": "Not Found"
+          }
+        }
+      }
+    },
+    "/api/user": {
+      "post": {
+        "tags": [
+          "user-controller"
+        ],
+        "summary": "createNew",
+        "operationId": "createNewUsingPOST_1",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/UserVO"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "201": {
+            "description": "Created"
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          },
+          "404": {
+            "description": "Not Found"
+          }
+        }
+      }
+    },
+    "/api/user/activate/{activationCode}": {
+      "post": {
+        "tags": [
+          "user-controller"
+        ],
+        "summary": "activate",
+        "operationId": "activateUsingPOST",
+        "parameters": [
+          {
+            "name": "activationCode",
+            "in": "path",
+            "description": "activationCode",
+            "required": true,
+            "style": "simple",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "201": {
+            "description": "Created"
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          },
+          "404": {
+            "description": "Not Found"
+          }
+        }
+      }
+    },
+    "/api/user/check-availability": {
+      "get": {
+        "tags": [
+          "user-controller"
+        ],
+        "summary": "checkAvailability",
+        "operationId": "checkAvailabilityUsingGET",
+        "parameters": [
+          {
+            "name": "email",
+            "in": "query",
+            "description": "email",
+            "required": true,
+            "style": "form",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "nickname",
+            "in": "query",
+            "description": "nickname",
+            "required": true,
+            "style": "form",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          },
+          "404": {
+            "description": "Not Found"
+          }
+        }
+      }
+    },
+    "/api/user/current": {
+      "get": {
+        "tags": [
+          "user-controller"
+        ],
+        "summary": "currentUser",
+        "operationId": "currentUserUsingGET",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/CurrentUserVO"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          },
+          "404": {
+            "description": "Not Found"
+          }
+        }
+      }
+    },
+    "/api/user/current/avatar": {
+      "get": {
+        "tags": [
+          "user-controller"
+        ],
+        "summary": "getAvatar",
+        "operationId": "getAvatarUsingGET",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/Resource"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          },
+          "404": {
+            "description": "Not Found"
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "user-controller"
+        ],
+        "summary": "updatePhoto",
+        "operationId": "updatePhotoUsingPOST",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "string",
+                "format": "binary"
+              }
+            },
+            "application/octet-stream": {
+              "schema": {
+                "type": "string",
+                "format": "binary"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "201": {
+            "description": "Created"
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          },
+          "404": {
+            "description": "Not Found"
+          }
+        }
+      }
+    },
+    "/api/user/current/data": {
+      "get": {
+        "tags": [
+          "user-controller"
+        ],
+        "summary": "currentUserProfile",
+        "operationId": "currentUserProfileUsingGET",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/UserVO"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          },
+          "404": {
+            "description": "Not Found"
+          }
+        }
+      },
+      "patch": {
+        "tags": [
+          "user-controller"
+        ],
+        "summary": "updateCurrentUserProfile",
+        "operationId": "updateCurrentUserProfileUsingPATCH",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/UserVO"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "204": {
+            "description": "No Content"
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          }
+        }
+      }
+    },
+    "/api/user/current/password": {
+      "patch": {
+        "tags": [
+          "user-controller"
+        ],
+        "summary": "updatePassword",
+        "operationId": "updatePasswordUsingPATCH",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/PasswordVO"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "204": {
+            "description": "No Content"
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          }
+        }
+      }
+    },
+    "/api/user/current/privacy": {
+      "get": {
+        "tags": [
+          "user-controller"
+        ],
+        "summary": "currentUserPrivacy",
+        "operationId": "currentUserPrivacyUsingGET",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/UserPrivacyVO"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          },
+          "404": {
+            "description": "Not Found"
+          }
+        }
+      },
+      "patch": {
+        "tags": [
+          "user-controller"
+        ],
+        "summary": "updateCurrentUserPrivacy",
+        "operationId": "updateCurrentUserPrivacyUsingPATCH",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/UserPrivacyVO"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "204": {
+            "description": "No Content"
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          }
+        }
+      }
+    },
+    "/api/user/current/tokens": {
+      "get": {
+        "tags": [
+          "user-controller"
+        ],
+        "summary": "listTokens",
+        "operationId": "listTokensUsingGET",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/ManagedTokenVO"
+                  }
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          },
+          "404": {
+            "description": "Not Found"
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "user-controller"
+        ],
+        "summary": "createToken",
+        "operationId": "createTokenUsingPOST",
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "201": {
+            "description": "Created"
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          },
+          "404": {
+            "description": "Not Found"
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "user-controller"
+        ],
+        "summary": "removeToken",
+        "operationId": "removeTokenUsingDELETE",
+        "parameters": [
+          {
+            "name": "tokenId",
+            "in": "query",
+            "description": "tokenId",
+            "required": true,
+            "style": "form",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "204": {
+            "description": "No Content"
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          }
+        }
+      }
+    },
+    "/api/user/recover": {
+      "post": {
+        "tags": [
+          "user-controller"
+        ],
+        "summary": "recover",
+        "operationId": "recoverUsingPOST",
+        "parameters": [
+          {
+            "name": "recoverCode",
+            "in": "query",
+            "description": "recoverCode",
+            "required": true,
+            "style": "form",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "email",
+            "in": "query",
+            "description": "email",
+            "required": true,
+            "style": "form",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "password",
+            "in": "query",
+            "description": "password",
+            "required": true,
+            "style": "form",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "passwordConfirmation",
+            "in": "query",
+            "description": "passwordConfirmation",
+            "required": true,
+            "style": "form",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "201": {
+            "description": "Created"
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          },
+          "404": {
+            "description": "Not Found"
+          }
+        }
+      }
+    },
+    "/api/user/recover/{email}": {
+      "post": {
+        "tags": [
+          "user-controller"
+        ],
+        "summary": "generateRecover",
+        "operationId": "generateRecoverUsingPOST",
+        "parameters": [
+          {
+            "name": "email",
+            "in": "path",
+            "description": "email",
+            "required": true,
+            "style": "simple",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "201": {
+            "description": "Created"
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          },
+          "404": {
+            "description": "Not Found"
+          }
+        }
+      }
+    },
+    "/api/user/request_deletion": {
+      "post": {
+        "tags": [
+          "user-controller"
+        ],
+        "summary": "deleteUser",
+        "operationId": "deleteUserUsingPOST",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/DeleteUserRequestVO"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "201": {
+            "description": "Created"
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          },
+          "404": {
+            "description": "Not Found"
+          }
+        }
+      }
+    },
+    "/api/user/resend-activation": {
+      "post": {
+        "tags": [
+          "user-controller"
+        ],
+        "summary": "resendActivationCode",
+        "operationId": "resendActivationCodeUsingPOST",
+        "parameters": [
+          {
+            "name": "email",
+            "in": "query",
+            "description": "email",
+            "required": true,
+            "style": "form",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "201": {
+            "description": "Created"
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          },
+          "404": {
+            "description": "Not Found"
+          }
+        }
+      }
+    },
+    "/api/user/{id}/avatar": {
+      "get": {
+        "tags": [
+          "user-controller"
+        ],
+        "summary": "avatar",
+        "operationId": "avatarUsingGET",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "id",
+            "required": true,
+            "style": "simple",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/Resource"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          },
+          "404": {
+            "description": "Not Found"
+          }
+        }
+      }
+    },
+    "/api/user-requests": {
+      "get": {
+        "tags": [
+          "user-request-controller"
+        ],
+        "summary": "findAllUserRequests",
+        "operationId": "findAllUserRequestsUsingGET",
+        "parameters": [
+          {
+            "name": "page",
+            "in": "query",
+            "description": "page",
+            "required": false,
+            "style": "form",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "size",
+            "in": "query",
+            "description": "size",
+            "required": false,
+            "style": "form",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/UserRequestVO"
+                  }
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          },
+          "404": {
+            "description": "Not Found"
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "AnyUserVO": {
+        "title": "AnyUserVO",
+        "type": "object",
+        "properties": {
+          "createTime": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "description": {
+            "type": "string"
+          },
+          "email": {
+            "type": "string"
+          },
+          "githubAccount": {
+            "type": "string"
+          },
+          "id": {
+            "type": "string"
+          },
+          "lastName": {
+            "type": "string"
+          },
+          "name": {
+            "type": "string"
+          },
+          "nickname": {
+            "type": "string"
+          },
+          "role": {
+            "type": "string",
+            "enum": [
+              "ADMIN",
+              "DEVELOPER",
+              "OWNER",
+              "PUBLISHER",
+              "USER"
+            ]
+          },
+          "twitterAccount": {
+            "type": "string"
+          }
+        }
+      },
+      "BuildDescriptor": {
+        "title": "BuildDescriptor",
+        "required": [
+          "artifactId",
+          "groupId",
+          "type",
+          "version"
+        ],
+        "type": "object",
+        "properties": {
+          "artifactId": {
+            "type": "string"
+          },
+          "author": {
+            "type": "string"
+          },
+          "dependencies": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "description": {
+            "type": "string"
+          },
+          "documentationUrl": {
+            "type": "string"
+          },
+          "groupId": {
+            "type": "string"
+          },
+          "includeDirs": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "issueUrl": {
+            "type": "string"
+          },
+          "license": {
+            "type": "string"
+          },
+          "modules": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/BuildDescriptor"
+            }
+          },
+          "package": {
+            "$ref": "#/components/schemas/PackageConfig"
+          },
+          "plugins": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/PluginConfig"
+            }
+          },
+          "sourceUrl": {
+            "type": "string"
+          },
+          "sources": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "targets": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/TargetConfig"
+            }
+          },
+          "testSources": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "type": {
+            "type": "string"
+          },
+          "version": {
+            "type": "string"
+          }
+        }
+      },
+      "CurrentUserVO": {
+        "title": "CurrentUserVO",
+        "type": "object",
+        "properties": {
+          "email": {
+            "type": "string"
+          },
+          "id": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "image": {
+            "type": "string"
+          },
+          "lastName": {
+            "type": "string"
+          },
+          "name": {
+            "type": "string"
+          }
+        }
+      },
+      "DeleteUserRequestVO": {
+        "title": "DeleteUserRequestVO",
+        "type": "object",
+        "properties": {
+          "clientDatetime": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "confirmation": {
+            "type": "string"
+          },
+          "username": {
+            "type": "string"
+          }
+        }
+      },
+      "InputStream": {
+        "title": "InputStream",
+        "type": "object"
+      },
+      "LinkOptions": {
+        "title": "LinkOptions",
+        "type": "object",
+        "properties": {
+          "debugInformation": {
+            "type": "boolean"
+          },
+          "other": {
+            "type": "string"
+          }
+        }
+      },
+      "ManagedTokenVO": {
+        "title": "ManagedTokenVO",
+        "type": "object",
+        "properties": {
+          "creationDate": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "expireDate": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "token": {
+            "type": "string"
+          }
+        }
+      },
+      "ModelAndView": {
+        "title": "ModelAndView",
+        "type": "object",
+        "properties": {
+          "empty": {
+            "type": "boolean"
+          },
+          "model": {
+            "type": "object"
+          },
+          "modelMap": {
+            "type": "object",
+            "additionalProperties": {
+              "type": "object"
+            }
+          },
+          "reference": {
+            "type": "boolean"
+          },
+          "status": {
+            "type": "string",
+            "enum": [
+              "ACCEPTED",
+              "ALREADY_REPORTED",
+              "BAD_GATEWAY",
+              "BAD_REQUEST",
+              "BANDWIDTH_LIMIT_EXCEEDED",
+              "CHECKPOINT",
+              "CONFLICT",
+              "CONTINUE",
+              "CREATED",
+              "DESTINATION_LOCKED",
+              "EXPECTATION_FAILED",
+              "FAILED_DEPENDENCY",
+              "FORBIDDEN",
+              "FOUND",
+              "GATEWAY_TIMEOUT",
+              "GONE",
+              "HTTP_VERSION_NOT_SUPPORTED",
+              "IM_USED",
+              "INSUFFICIENT_SPACE_ON_RESOURCE",
+              "INSUFFICIENT_STORAGE",
+              "INTERNAL_SERVER_ERROR",
+              "I_AM_A_TEAPOT",
+              "LENGTH_REQUIRED",
+              "LOCKED",
+              "LOOP_DETECTED",
+              "METHOD_FAILURE",
+              "METHOD_NOT_ALLOWED",
+              "MOVED_PERMANENTLY",
+              "MOVED_TEMPORARILY",
+              "MULTIPLE_CHOICES",
+              "MULTI_STATUS",
+              "NETWORK_AUTHENTICATION_REQUIRED",
+              "NON_AUTHORITATIVE_INFORMATION",
+              "NOT_ACCEPTABLE",
+              "NOT_EXTENDED",
+              "NOT_FOUND",
+              "NOT_IMPLEMENTED",
+              "NOT_MODIFIED",
+              "NO_CONTENT",
+              "OK",
+              "PARTIAL_CONTENT",
+              "PAYLOAD_TOO_LARGE",
+              "PAYMENT_REQUIRED",
+              "PERMANENT_REDIRECT",
+              "PRECONDITION_FAILED",
+              "PRECONDITION_REQUIRED",
+              "PROCESSING",
+              "PROXY_AUTHENTICATION_REQUIRED",
+              "REQUESTED_RANGE_NOT_SATISFIABLE",
+              "REQUEST_ENTITY_TOO_LARGE",
+              "REQUEST_HEADER_FIELDS_TOO_LARGE",
+              "REQUEST_TIMEOUT",
+              "REQUEST_URI_TOO_LONG",
+              "RESET_CONTENT",
+              "SEE_OTHER",
+              "SERVICE_UNAVAILABLE",
+              "SWITCHING_PROTOCOLS",
+              "TEMPORARY_REDIRECT",
+              "TOO_EARLY",
+              "TOO_MANY_REQUESTS",
+              "UNAUTHORIZED",
+              "UNAVAILABLE_FOR_LEGAL_REASONS",
+              "UNPROCESSABLE_ENTITY",
+              "UNSUPPORTED_MEDIA_TYPE",
+              "UPGRADE_REQUIRED",
+              "URI_TOO_LONG",
+              "USE_PROXY",
+              "VARIANT_ALSO_NEGOTIATES"
+            ]
+          },
+          "view": {
+            "$ref": "#/components/schemas/View"
+          },
+          "viewName": {
+            "type": "string"
+          }
+        }
+      },
+      "NewReviewVO": {
+        "title": "NewReviewVO",
+        "required": [
+          "review",
+          "title"
+        ],
+        "type": "object",
+        "properties": {
+          "rate": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "review": {
+            "maxLength": 1000,
+            "minLength": 100,
+            "type": "string"
+          },
+          "title": {
+            "maxLength": 100,
+            "minLength": 1,
+            "type": "string"
+          },
+          "vulnerability": {
+            "type": "boolean"
+          }
+        }
+      },
+      "OAuth2Token": {
+        "title": "OAuth2Token",
+        "type": "object",
+        "properties": {
+          "access_token": {
+            "type": "string"
+          },
+          "expires_in": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "refresh_token": {
+            "type": "string"
+          },
+          "scope": {
+            "type": "string"
+          },
+          "token_type": {
+            "type": "string"
+          }
+        }
+      },
+      "Options": {
+        "title": "Options",
+        "type": "object",
+        "properties": {
+          "debug": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "optimization": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "other": {
+            "type": "string"
+          },
+          "warnings": {
+            "type": "string"
+          }
+        }
+      },
+      "OrgUserVO": {
+        "title": "OrgUserVO",
+        "type": "object",
+        "properties": {
+          "active": {
+            "type": "boolean"
+          },
+          "inviteDate": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "name": {
+            "type": "string"
+          },
+          "nickname": {
+            "type": "string"
+          },
+          "role": {
+            "type": "string",
+            "enum": [
+              "ADMIN",
+              "DEVELOPER",
+              "OWNER",
+              "PUBLISHER",
+              "USER"
+            ]
+          }
+        }
+      },
+      "OwnerStatisticsVO": {
+        "title": "OwnerStatisticsVO",
+        "type": "object",
+        "properties": {
+          "downloadsLast7Days": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "packageReviewsToday": {
+            "$ref": "#/components/schemas/PackageStatisticVO"
+          },
+          "topPackageDownload7Days": {
+            "$ref": "#/components/schemas/PackageStatisticVO"
+          }
+        }
+      },
+      "OwnerVO": {
+        "title": "OwnerVO",
+        "type": "object",
+        "properties": {
+          "createTime": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "description": {
+            "type": "string"
+          },
+          "email": {
+            "type": "string"
+          },
+          "githubAccount": {
+            "type": "string"
+          },
+          "id": {
+            "type": "string"
+          },
+          "image": {
+            "type": "string"
+          },
+          "name": {
+            "type": "string"
+          },
+          "nickname": {
+            "type": "string"
+          },
+          "twitterAccount": {
+            "type": "string"
+          }
+        }
+      },
+      "PackageConfig": {
+        "title": "PackageConfig",
+        "type": "object",
+        "properties": {
+          "includes": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "name": {
+            "type": "string"
+          },
+          "other": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        }
+      },
+      "PackageDataVO": {
+        "title": "PackageDataVO",
+        "required": [
+          "name",
+          "type"
+        ],
+        "type": "object",
+        "properties": {
+          "group": {
+            "$ref": "#/components/schemas/PackageGroupVO"
+          },
+          "name": {
+            "pattern": "^([a-z][a-z0-9_-]+)$",
+            "type": "string"
+          },
+          "public": {
+            "type": "boolean"
+          },
+          "releases": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/PackageReleaseVO"
+            }
+          },
+          "type": {
+            "type": "string",
+            "enum": [
+              "PACKAGE",
+              "PLUGIN"
+            ]
+          }
+        }
+      },
+      "PackageGroupVO": {
+        "title": "PackageGroupVO",
+        "required": [
+          "name"
+        ],
+        "type": "object",
+        "properties": {
+          "description": {
+            "type": "string"
+          },
+          "name": {
+            "pattern": "^([a-z][a-z0-9_-]+)([.][a-z][a-z0-9_-]+)*$",
+            "type": "string"
+          },
+          "owner": {
+            "$ref": "#/components/schemas/OwnerVO"
+          }
+        }
+      },
+      "PackageReleaseVO": {
+        "title": "PackageReleaseVO",
+        "type": "object",
+        "properties": {
+          "description": {
+            "type": "string"
+          },
+          "documentationUrl": {
+            "type": "string"
+          },
+          "issuesUrl": {
+            "type": "string"
+          },
+          "license": {
+            "type": "string"
+          },
+          "publisher": {
+            "$ref": "#/components/schemas/OwnerVO"
+          },
+          "releaseDate": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "sourceUrl": {
+            "type": "string"
+          },
+          "version": {
+            "type": "string"
+          }
+        }
+      },
+      "PackageStatisticVO": {
+        "title": "PackageStatisticVO",
+        "type": "object",
+        "properties": {
+          "count": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "packageName": {
+            "type": "string"
+          }
+        }
+      },
+      "PackageSummaryVO": {
+        "title": "PackageSummaryVO",
+        "type": "object",
+        "properties": {
+          "groupName": {
+            "type": "string"
+          },
+          "name": {
+            "type": "string"
+          },
+          "ownerNickname": {
+            "type": "string"
+          },
+          "releaseDate": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "version": {
+            "type": "string"
+          }
+        }
+      },
+      "PasswordVO": {
+        "title": "PasswordVO",
+        "type": "object",
+        "properties": {
+          "password": {
+            "type": "string"
+          },
+          "passwordConfirmation": {
+            "type": "string"
+          }
+        }
+      },
+      "PluginConfig": {
+        "title": "PluginConfig",
+        "type": "object",
+        "properties": {
+          "config": {
+            "type": "object",
+            "additionalProperties": {
+              "type": "string"
+            }
+          },
+          "package": {
+            "type": "string"
+          },
+          "phases": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        }
+      },
+      "PluginDescriptor": {
+        "title": "PluginDescriptor",
+        "required": [
+          "artifactId",
+          "groupId",
+          "version"
+        ],
+        "type": "object",
+        "properties": {
+          "artifactId": {
+            "type": "string"
+          },
+          "author": {
+            "type": "string"
+          },
+          "description": {
+            "type": "string"
+          },
+          "documentationUrl": {
+            "type": "string"
+          },
+          "groupId": {
+            "type": "string"
+          },
+          "issueUrl": {
+            "type": "string"
+          },
+          "license": {
+            "type": "string"
+          },
+          "main": {
+            "type": "string"
+          },
+          "phases": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "sourceUrl": {
+            "type": "string"
+          },
+          "version": {
+            "type": "string"
+          }
+        }
+      },
+      "PublicKeyVO": {
+        "title": "PublicKeyVO",
+        "type": "object",
+        "properties": {
+          "active": {
+            "type": "boolean"
+          },
+          "algorithm": {
+            "type": "string",
+            "enum": [
+              "SHA256withECDSA",
+              "SHA256withRSA"
+            ]
+          },
+          "hash": {
+            "type": "string"
+          },
+          "keyId": {
+            "type": "string"
+          },
+          "publicKey": {
+            "type": "string"
+          }
+        }
+      },
+      "Resource": {
+        "title": "Resource",
+        "type": "object",
+        "properties": {
+          "description": {
+            "type": "string"
+          },
+          "file": {
+            "type": "string",
+            "format": "binary"
+          },
+          "filename": {
+            "type": "string"
+          },
+          "inputStream": {
+            "$ref": "#/components/schemas/InputStream"
+          },
+          "open": {
+            "type": "boolean"
+          },
+          "readable": {
+            "type": "boolean"
+          },
+          "uri": {
+            "type": "string",
+            "format": "uri"
+          },
+          "url": {
+            "type": "string",
+            "format": "url"
+          }
+        }
+      },
+      "ReviewLikeVO": {
+        "title": "ReviewLikeVO",
+        "required": [
+          "rate"
+        ],
+        "type": "object",
+        "properties": {
+          "rate": {
+            "type": "integer",
+            "format": "int32"
+          }
+        }
+      },
+      "ReviewVO": {
+        "title": "ReviewVO",
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "myRate": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "rate": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "review": {
+            "type": "string"
+          },
+          "reviewDislikes": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "reviewLikes": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "title": {
+            "type": "string"
+          },
+          "user": {
+            "$ref": "#/components/schemas/AnyUserVO"
+          },
+          "vulnerability": {
+            "type": "boolean"
+          }
+        }
+      },
+      "StarsVO": {
+        "title": "StarsVO",
+        "type": "object",
+        "properties": {
+          "stars": {
+            "type": "number",
+            "format": "double"
+          },
+          "totalReviews": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "totalVulnerabilities": {
+            "type": "integer",
+            "format": "int64"
+          }
+        }
+      },
+      "StatisticsVO": {
+        "title": "StatisticsVO",
+        "type": "object",
+        "properties": {
+          "downloadsLast30Days": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "totalArtifacts": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "usersCreatedLast30Days": {
+            "type": "integer",
+            "format": "int64"
+          }
+        }
+      },
+      "TargetConfig": {
+        "title": "TargetConfig",
+        "type": "object",
+        "properties": {
+          "arch": {
+            "type": "string"
+          },
+          "defines": {
+            "type": "object",
+            "additionalProperties": {
+              "type": "string"
+            }
+          },
+          "includeDirs": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "libraries": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "libraryPaths": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "linkOptions": {
+            "$ref": "#/components/schemas/LinkOptions"
+          },
+          "name": {
+            "type": "string"
+          },
+          "options": {
+            "$ref": "#/components/schemas/Options"
+          },
+          "platform": {
+            "type": "string"
+          },
+          "plugins": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/PluginConfig"
+            }
+          },
+          "sources": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "toolchain": {
+            "type": "string"
+          }
+        }
+      },
+      "UserPrivacyVO": {
+        "title": "UserPrivacyVO",
+        "type": "object",
+        "properties": {
+          "showEmail": {
+            "type": "boolean"
+          },
+          "showGithub": {
+            "type": "boolean"
+          },
+          "showName": {
+            "type": "boolean"
+          },
+          "showTwitter": {
+            "type": "boolean"
+          }
+        }
+      },
+      "UserRequestVO": {
+        "title": "UserRequestVO",
+        "type": "object",
+        "properties": {
+          "createTime": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "executionDate": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "id": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "status": {
+            "type": "string",
+            "enum": [
+              "CANCELLED",
+              "CREATED",
+              "EXECUTING",
+              "FINISHED",
+              "SCHEDULED"
+            ]
+          },
+          "type": {
+            "type": "string",
+            "enum": [
+              "USER_DELETION"
+            ]
+          }
+        }
+      },
+      "UserVO": {
+        "title": "UserVO",
+        "required": [
+          "email",
+          "lastName",
+          "name",
+          "nickname",
+          "termsAccepted",
+          "userAcceptanceData"
+        ],
+        "type": "object",
+        "properties": {
+          "activationCode": {
+            "type": "string"
+          },
+          "confirmPassword": {
+            "type": "string"
+          },
+          "description": {
+            "type": "string"
+          },
+          "email": {
+            "type": "string"
+          },
+          "githubAccount": {
+            "type": "string"
+          },
+          "lastName": {
+            "type": "string"
+          },
+          "name": {
+            "type": "string"
+          },
+          "nickname": {
+            "type": "string"
+          },
+          "password": {
+            "type": "string"
+          },
+          "recoveryCode": {
+            "type": "string"
+          },
+          "termsAccepted": {
+            "type": "boolean"
+          },
+          "twitterAccount": {
+            "type": "string"
+          },
+          "userAcceptanceData": {
+            "type": "string"
+          }
+        }
+      },
+      "View": {
+        "title": "View",
+        "type": "object",
+        "properties": {
+          "contentType": {
+            "type": "string"
+          }
+        }
+      }
+    }
+  }
+}
