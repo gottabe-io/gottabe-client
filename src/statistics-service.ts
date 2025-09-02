@@ -1,5 +1,5 @@
 import {HttpClient} from 'igottp';
-import {PackageSummaryVO, StatisticsVO, OwnersStatisticsVO} from "./types";
+import {PackageSummaryVO, StatisticsVO, OwnerStatisticsVO} from "./types";
 
 export class ApiStatisticsService {
     client: HttpClient;
@@ -17,7 +17,7 @@ export class ApiStatisticsService {
         return await this.client.get(`/api/statistics/general-statistics`, {...options});
     }
 
-    async ownerStatistics(currentOwner: number, options?: any): Promise<OwnersStatisticsVO> {
+    async ownerStatistics(currentOwner: number, options?: any): Promise<OwnerStatisticsVO> {
         return await this.client.get(`/api/statistics/my-statistics`, {params: {"current-owner": currentOwner}, ...options});
     }
 

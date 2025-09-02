@@ -1,5 +1,5 @@
 import {HttpClient} from 'igottp';
-import {OAuth2Token} from './user-types';
+import {OAuth2Token} from './types';
 
 export class OauthTokenService {
     client: HttpClient;

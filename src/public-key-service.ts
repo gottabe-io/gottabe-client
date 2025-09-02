@@ -12,7 +12,6 @@ export class ApiPublicKeyService {
         return await this.client.get(`/api/public-key`, Object.assign({params}, options || {}));
     }
 
-
     async uploadPublicKey(organizationId?:number, body?:PublicKeyVO, options?: any): Promise<void> { 
         let headers: any = {'organization-id': organizationId};
         await this.client.postForEntity(`/api/public-key`, body, Object.assign({headers}, options || {}));

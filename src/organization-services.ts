@@ -1,29 +1,30 @@
 import {HttpClient} from 'igottp';
-import {AnyUserVO, OrgUserVO, OwnerVO} from "./types";
+import {OwnerVO, AnyUserVO, OrgUserVO} from './types';
 
 export class ApiOrganizationService {
-    httpClient: HttpClient;
-    constructor(httpClient: HttpClient) {
-        this.httpClient = httpClient;
+    client: HttpClient;
+    constructor(client: HttpClient) {
+        this.client = client;
     }
-    async createNew(body?:OwnerVO): Promise<void> {
-        await this.httpClient.postForEntity(`/api/organization`, body);
-    }
-
-    async retrieve(nickname:string): Promise<OwnerVO> {
-        return await this.httpClient.get(`/api/organization/${nickname}`);
+    
+    async createNew_1(body:OwnerVO): Promise<void> { 
+        await this.client.postForEntity(`/api/organization`, body);
     }
 
-    async retrieveUsers(nickname:string): Promise<AnyUserVO[]> {
-        return await this.httpClient.get(`/api/organization/${nickname}/users`);
+    async retrieve(nickname:string): Promise<OwnerVO> { 
+        return await this.client.get(`/api/organization/${nickname}`);
     }
 
-    async addUser(nickname:string, body?:AnyUserVO): Promise<void> {
-        await this.httpClient.putForEntity(`/api/organization/${nickname}/users`, body);
+    async retrieveUsers(nickname:string): Promise<AnyUserVO[]> { 
+        return await this.client.get(`/api/organization/${nickname}/users`);
     }
 
-    async getMyOrganizations(): Promise<OrgUserVO[]> {
-        return await this.httpClient.get(`/api/organization/mine`);
+    async addUser(nickname:string, body:AnyUserVO): Promise<void> { 
+        await this.client.putForEntity(`/api/organization/${nickname}/users`, body);
+    }
+
+    async getMyOrganizations(): Promise<OrgUserVO[]> { 
+        return await this.client.get(`/api/organization/mine`);
     }
 
 }
